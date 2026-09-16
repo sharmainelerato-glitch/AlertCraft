@@ -4,6 +4,8 @@ AlertCraft is a detection engineering and investigation lab I built to practise 
 
 Instead of only displaying alerts, the project lets me work through the detection process from telemetry to investigation and rule tuning.
 
+**Live demo:** https://alertcraft.onrender.com
+
 ## What it does
 
 AlertCraft can:
@@ -40,6 +42,36 @@ I can adjust a detection rule and test it against the same telemetry again. Aler
 
 This helps me practise detection tuning and understand how changing a rule affects what gets detected.
 
+## Investigation workflow
+
+When an alert is generated, I can open it and review the events that caused the detection.
+
+The investigation view lets me:
+
+- Review the alert evidence
+- Follow the event timeline
+- See the related MITRE ATT&CK techniques
+- Set an investigation status
+- Record a disposition such as True Positive or False Positive
+- Add analyst notes
+
+This gives me a way to practise both detection and investigation instead of stopping when an alert fires.
+
+## Reports
+
+AlertCraft can build an investigation report from the current analysis.
+
+The report can include:
+
+- Analysis summary
+- Detected findings
+- MITRE ATT&CK mappings
+- Investigation information
+- Analyst notes and disposition
+- Detection replay results
+
+Reports can be printed or saved as PDF from the browser.
+
 ## Tech used
 
 - Python
@@ -49,25 +81,13 @@ This helps me practise detection tuning and understand how changing a rule affec
 - CSS
 - Pytest
 - MITRE ATT&CK
+- Gunicorn
 
 ## Testing
 
-The project includes automated tests for the parser, detection rules, investigations, replay functionality and API behaviour.
+The project includes automated tests for the parser, detection rules, investigations, replay functionality, telemetry validation and API behaviour.
 
 To run the tests:
 
 ```bash
 python -m pytest -q
-```
-
-The current test suite contains 19 automated tests.
-
-## Why I built it
-
-I built AlertCraft to improve my practical skills in detection engineering, SOC investigations and alert tuning.
-
-I wanted a project where I could work with telemetry, understand why an alert fired, investigate the evidence and then test how changes to a detection rule affect the result.
-
-## Important note
-
-AlertCraft is a learning and portfolio project. It is not a production SIEM, and the included demo telemetry is synthetic.

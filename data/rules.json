@@ -1,0 +1,69 @@
+[
+  {
+    "id": "AC-001",
+    "name": "Authentication Failure Burst",
+    "description": "Detects repeated failed authentication attempts against the same account from the same source.",
+    "type": "failed_login_burst",
+    "threshold": 5,
+    "window_minutes": 5,
+    "severity": "Medium",
+    "enabled": true,
+    "mitre": {
+      "technique": "T1110",
+      "name": "Brute Force",
+      "tactic": "Credential Access"
+    }
+  },
+  {
+    "id": "AC-002",
+    "name": "Failed Authentication Followed by Success",
+    "description": "Detects repeated failed authentication attempts followed by a successful login for the same account and source.",
+    "type": "failed_then_success",
+    "threshold": 5,
+    "window_minutes": 5,
+    "severity": "High",
+    "enabled": true,
+    "mitre": {
+      "technique": "T1110",
+      "name": "Brute Force",
+      "tactic": "Credential Access"
+    }
+  },
+  {
+    "id": "AC-003",
+    "name": "Encoded PowerShell Execution",
+    "description": "Detects PowerShell execution containing encoded command arguments.",
+    "type": "encoded_powershell",
+    "severity": "High",
+    "enabled": true,
+    "mitre": {
+      "technique": "T1059.001",
+      "name": "PowerShell",
+      "tactic": "Execution"
+    }
+  },
+  {
+    "id": "AC-004",
+    "name": "Suspicious Authentication Followed by PowerShell",
+    "description": "Correlates suspicious authentication activity with subsequent PowerShell execution on the same host and account.",
+    "type": "auth_then_powershell",
+    "threshold": 5,
+    "window_minutes": 10,
+    "severity": "Critical",
+    "enabled": true,
+    "mitre": {
+      "techniques": [
+        {
+          "technique": "T1110",
+          "name": "Brute Force",
+          "tactic": "Credential Access"
+        },
+        {
+          "technique": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution"
+        }
+      ]
+    }
+  }
+]

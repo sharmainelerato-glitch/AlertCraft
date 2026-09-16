@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AlertCraft Detection Engineering and Investigation Lab"
+    >
+
+    <title>AlertCraft | Detection Engineering Lab</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-mark">AC</div>
+
+            <div>
+                <h1>AlertCraft</h1>
+                <p>Detection Engineering Lab</p>
+            </div>
+        </div>
+
+
+        <nav class="navigation">
+
+            <button
+                class="nav-item active"
+                data-view="overview"
+            >
+                <span class="nav-icon">01</span>
+                Overview
+            </button>
+
+            <button
+                class="nav-item"
+                data-view="alerts"
+            >
+                <span class="nav-icon">02</span>
+                Alerts
+            </button>
+
+            <button
+                class="nav-item"
+                data-view="telemetry"
+            >
+                <span class="nav-icon">03</span>
+                Telemetry
+            </button>
+
+            <button
+                class="nav-item"
+                data-view="rules"
+            >
+                <span class="nav-icon">04</span>
+                Detection Rules
+            </button>
+
+            <button
+                class="nav-item"
+                data-view="replay"
+            >
+                <span class="nav-icon">05</span>
+                Replay
+            </button>
+
+            <button
+                class="nav-item"
+                data-view="reports"
+            >
+                <span class="nav-icon">06</span>
+                Reports
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="engine-status">
+                <span
+                    class="status-dot"
+                    id="status-dot"
+                ></span>
+
+                <div>
+                    <strong id="engine-status">
+                        Connecting
+                    </strong>
+
+                    <span>
+                        Detection engine
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <main class="workspace">
+
+        <header class="topbar">
+
+            <div>
+                <p class="eyebrow">
+                    SECURITY OPERATIONS
+                </p>
+
+                <h2 id="page-title">
+                    Overview
+                </h2>
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <span
+                    class="dataset-indicator"
+                    id="dataset-indicator"
+                >
+                    No telemetry loaded
+                </span>
+
+                <button
+                    class="button button-secondary"
+                    id="load-demo-button"
+                >
+                    Load Demo
+                </button>
+
+                <button
+                    class="button button-primary"
+                    id="upload-button"
+                >
+                    Analyze Telemetry
+                </button>
+
+                <input
+                    id="file-input"
+                    type="file"
+                    accept=".json,.log,.txt"
+                    hidden
+                >
+
+            </div>
+
+        </header>
+
+
+        <div
+            id="notification"
+            class="notification"
+            hidden
+        ></div>
+
+
+        <section
+            id="workspace-content"
+            class="workspace-content"
+        >
+
+            <div class="welcome-panel">
+
+                <div class="welcome-copy">
+
+                    <p class="eyebrow">
+                        ALERTCRAFT
+                    </p>
+
+                    <h3>
+                        Detection engineering,
+                        investigation and replay.
+                    </h3>
+
+                    <p>
+                        Analyze security telemetry,
+                        investigate evidence-backed alerts,
+                        and test detection-rule changes
+                        against the same event dataset.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-actions">
+
+                    <button
+                        class="button button-primary"
+                        id="welcome-demo-button"
+                    >
+                        Explore controlled demo
+                    </button>
+
+                    <button
+                        class="button button-secondary"
+                        id="welcome-upload-button"
+                    >
+                        Upload telemetry
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="empty-state">
+
+                <div class="empty-symbol">
+                    AC
+                </div>
+
+                <h3>
+                    No telemetry loaded
+                </h3>
+
+                <p>
+                    Load AlertCraft's controlled SOC
+                    dataset or analyze your own JSON,
+                    LOG or TXT telemetry.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/static/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+{
+  "dataset": "AlertCraft Controlled SOC Lab",
+  "description": "Synthetic telemetry used to test AlertCraft's detection pipeline.",
+  "events": [
+    {
+      "timestamp": "2026-09-15T08:12:01Z",
+      "host": "FINANCE-WS01",
+      "source": "windows-security",
+      "event_id": 4625,
+      "event_type": "login_failed",
+      "username": "nandi.m",
+      "source_ip": "203.0.113.77",
+      "status": "failure",
+      "logon_type": 10
+    },
+    {
+      "timestamp": "2026-09-15T08:12:08Z",
+      "host": "FINANCE-WS01",
+      "source": "windows-security",
+      "event_id": 4625,
+      "event_type": "login_failed",
+      "username": "nandi.m",
+      "source_ip": "203.0.113.77",
+      "status": "failure",
+      "logon_type": 10
+    },
+    {
+      "timestamp": "2026-09-15T08:12:14Z",
+      "host": "FINANCE-WS01",
+      "source": "windows-security",
+      "event_id": 4625,
+      "event_type": "login_failed",
+      "username": "nandi.m",
+      "source_ip": "203.0.113.77",
+      "status": "failure",
+      "logon_type": 10
+    },
+    {
+      "timestamp": "2026-09-15T08:12:21Z",
+      "host": "FINANCE-WS01",
+      "source": "windows-security",
+      "event_id": 4625,
+      "event_type": "login_failed",
+      "username": "nandi.m",
+      "source_ip": "203.0.113.77",
+      "status": "failure",
+      "logon_type": 10
+    },
+    {
+      "timestamp": "2026-09-15T08:12:27Z",
+      "host": "FINANCE-WS01",
+      "source": "windows-security",
+      "event_id": 4625,
+      "event_type": "login_failed",
+      "username": "nandi.m",
+      "source_ip": "203.0.113.77",
+      "status": "failure",
+      "logon_type": 10
+    },
+    {
+      "timestamp": "2026-09-15T08:13:02Z",
+      "host": "FINANCE-WS01",
+      "source": "windows-security",
+      "event_id": 4624,
+      "event_type": "login_success",
+      "username": "nandi.m",
+      "source_ip": "203.0.113.77",
+      "status": "success",
+      "logon_type": 10
+    },
+    {
+      "timestamp": "2026-09-15T08:16:44Z",
+      "host": "FINANCE-WS01",
+      "source": "sysmon",
+      "event_id": 1,
+      "event_type": "process_create",
+      "username": "nandi.m",
+      "process": "powershell.exe",
+      "parent_process": "explorer.exe",
+      "command_line": "powershell.exe -enc SQBFAFgA"
+    },
+    {
+      "timestamp": "2026-09-15T08:22:17Z",
+      "host": "FINANCE-WS01",
+      "source": "sysmon",
+      "event_id": 3,
+      "event_type": "network_connection",
+      "username": "nandi.m",
+      "process": "powershell.exe",
+      "source_ip": "10.0.0.31",
+      "destination_ip": "198.51.100.24"
+    },
+    {
+      "timestamp": "2026-09-15T09:30:10Z",
+      "host": "HR-WS04",
+      "source": "windows-security",
+      "event_id": 4624,
+      "event_type": "login_success",
+      "username": "thabo.k",
+      "source_ip": "10.0.0.24",
+      "status": "success",
+      "logon_type": 2
+    }
+  ]
+}
